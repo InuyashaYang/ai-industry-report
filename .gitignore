@@ -1,1 +1,4 @@
 output/report_*.md
+__pycache__/
+*.pyc
+*.json.bak
