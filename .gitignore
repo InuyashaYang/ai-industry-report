@@ -1,4 +1,4 @@
-output/report_*.md
-__pycache__/
-*.pyc
+node_modules/
+output/
 *.json.bak
+.env
