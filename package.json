@@ -1,0 +1,18 @@
+{
+  "name": "ai-industry-report",
+  "version": "2.0.0",
+  "description": "AI产业洞察周报 OpenClaw Skill — 两层检索（搜狗微信爬虫 + RSS fallback），主控 AI 直接分析，飞书落盘",
+  "main": "scripts/search_wechat.js",
+  "scripts": {
+    "search": "node scripts/search_wechat.js"
+  },
+  "dependencies": {
+    "cheerio": "^1.2.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "keywords": ["openclaw", "wechat", "ai", "report", "feishu", "skill"],
+  "author": "InuyashaYang",
+  "license": "MIT"
+}

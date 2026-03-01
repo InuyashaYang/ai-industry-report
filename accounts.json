@@ -1,0 +1,80 @@
+{
+  "_comment": "ai-industry-report 信源配置。wechat_accounts 是要监控的微信公众号列表，用 wechat-article-search 脚本按号搜索。categories 的关键词用于 AI 分类。",
+
+  "wechat_accounts": [
+    { "name": "量子位",       "weight": 3 },
+    { "name": "机器之心",     "weight": 3 },
+    { "name": "新智元",       "weight": 3 },
+    { "name": "AI科技评论",   "weight": 2 },
+    { "name": "智东西",       "weight": 2 },
+    { "name": "硅星人",       "weight": 2 },
+    { "name": "36氪",         "weight": 2 },
+    { "name": "钛媒体",       "weight": 1 },
+    { "name": "极客公园",     "weight": 1 },
+    { "name": "晚点LatePost", "weight": 2 },
+    { "name": "AIGC开放社区", "weight": 1 },
+    { "name": "InfoQ",        "weight": 1 }
+  ],
+
+  "_accounts_note": "每次生成报告时，AI 对每个 wechat_accounts 调用 wechat-article-search 脚本搜索近期文章，再按 categories 分类。weight 越高优先展示。",
+
+  "rss_fallback": [
+    { "name": "量子位", "url": "https://www.qbitai.com/feed" },
+    { "name": "36kr",  "url": "https://36kr.com/feed" }
+  ],
+
+  "_rss_note": "DDG/搜狗不可用时的 fallback，直接 web_fetch RSS XML 拿文章列表。",
+
+  "search_topics": [
+    "大模型 Agent",
+    "具身智能 机器人",
+    "AI芯片 算力",
+    "自动驾驶",
+    "AI for Science",
+    "上海 AI",
+    "融资 投资"
+  ],
+
+  "_topics_note": "每个公众号 × 每个 topic 组合一次搜索，格式：'{公号名} {topic} {year}年{month}月'",
+
+  "categories": {
+    "模型/Agent应用": [
+      "大模型", "LLM", "Agent", "GPT", "Claude", "Gemini", "DeepSeek", "Qwen", "GLM",
+      "千问", "模型发布", "多模态", "推理模型", "基础模型", "微调", "代码生成",
+      "AI应用", "工作流", "Cursor", "Copilot", "vibe coding"
+    ],
+    "具身智能": [
+      "具身智能", "人形机器人", "机器人", "Humanoid", "Boston Dynamics",
+      "Figure", "Tesla Bot", "Optimus", "智元", "宇树", "灵巧手",
+      "双足", "四足", "操作", "抓取", "运动控制", "embodied"
+    ],
+    "算力": [
+      "GPU", "AI芯片", "算力", "英伟达", "NVIDIA", "AMD", "华为昇腾",
+      "TPU", "NPU", "H100", "H800", "超算", "数据中心", "HBM", "Blackwell"
+    ],
+    "端侧AI": [
+      "自动驾驶", "FSD", "端侧", "边缘AI", "Robotaxi", "L4", "L5",
+      "无人驾驶", "智能驾驶", "特斯拉", "华为智驾", "手机AI", "车路云"
+    ],
+    "AI4Science": [
+      "AI for Science", "AlphaFold", "蛋白质", "药物发现", "材料科学",
+      "生物信息", "基因", "分子", "化学", "物理模拟", "气候", "科学大模型"
+    ],
+    "上海AI生态": [
+      "上海", "张江", "临港", "浦东", "上海人工智能", "上海AI", "华东"
+    ],
+    "投融资动态": [
+      "融资", "投资", "估值", "IPO", "上市", "A轮", "B轮", "C轮",
+      "亿美元", "亿元", "创投", "独角兽", "VC", "战略投资", "并购"
+    ]
+  },
+
+  "filter_rules": {
+    "max_days": 7,
+    "min_articles_total": 8,
+    "skip_title_patterns": [
+      "每日动态", "每日简报", "每日资讯", "每日速览", "每周汇总",
+      "课程", "培训", "报名", "补贴申请", "精品课", "限时免费", "概念股"
+    ]
+  }
+}
